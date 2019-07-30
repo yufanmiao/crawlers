@@ -2,22 +2,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup as bs
 import re
 
-
-#def city_parser(table_list):
-#    building_names = []
-#    floors = []
-#    #tds = table_list[0].find_all("td")
-#    parsed_floors = table_list[0].find_all("td", {"align":"center"})
-#    for parsed_floor in parsed_floors:
-#        if re.search("^\d{0,4}$", parsed_floor.get_text()):
-#            floors.append(parsed_floor.get_text())
-#    #for td in tds:
-#    td_parsed = table_list[0]. find_all("a", {"class": "bhu"})
-#    for parsed_name in td_parsed:
-#        building_name = parsed_name.get_text()
-#        if not re.search("^\(\d+\)$",building_name):
-#            building_names.append(building_name)
-#    return (building_names, floors)
+# crawler for downloading data from website  "https://skyscraperpage.com/cities/"
 
 def retrieve_urls(main_url):
     urls = []
@@ -57,7 +42,6 @@ def city_parser(table_list):
 
 if __name__ == "__main__":
     
-    #main_url = "https://skyscraperpage.com/cities/"
     #chinese cities
     main_url = "https://skyscraperpage.com/database/country/3"
     base_url = "https://skyscraperpage.com"
